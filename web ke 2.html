@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benjoy Coffee & Eatery - Specialty Coffee & Culinary Hub in Bandung</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        espresso: {
+                            50: '#FBF9F5',
+                            100: '#F4ECE1',
+                            200: '#E6D4BF',
+                            300: '#D2B596',
+                            400: '#BC936E',
+                            500: '#A4744A',
+                            600: '#8A5A37',
+                            700: '#6F432B',
+                            800: '#583423',
+                            900: '#3D2217',
+                            950: '#23120B'
+                        },
+                        amberGold: '#D99B26',
+                        warmCream: '#FAF6EE',
+                        forestGreen: {
+                            500: '#2E5A44',
+                            700: '#1F3F2F',
+                            900: '#12261C'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-header {
+            background: rgba(250, 246, 238, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(210, 181, 150, 0.25);
+        }
+        .hero-gradient {
+            background: linear-gradient(180deg, rgba(35, 18, 11, 0.4) 0%, rgba(35, 18, 11, 0.85) 80%, rgba(35, 18, 11, 0.98) 100%);
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F4ECE1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #A4744A;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6F432B;
+        }
+    </style>
+</head>
+<body class="bg-warmCream text-espresso-950 font-sans antialiased selection:bg-amberGold selection:text-espresso-950">
+
+    <div class="bg-espresso-950 text-espresso-200 text-xs py-2.5 px-4 border-b border-espresso-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center space-x-6">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-amberGold"></i> Jl. Progo No. 18, Citarum, Bandung</span>
+                <span class="hidden md:flex items-center gap-2"><i class="fa-regular fa-clock text-amberGold"></i> Buka Setiap Hari: 08:00 - 23:00 WIB</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="hidden sm:inline text-espresso-400">Ikuti Kami:</span>
+                <a href="https://www.instagram.com/benjoy.coffeeatery?stkn=bXJ5dXNxOGRxZmVy" target="_blank" class="hover:text-amberGold transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@benjoy.coffeeatery?_r=1&_t=ZS-9AKSzH8dj40" target="_blank" class="hover:text-amberGold transition-colors" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="https://wa.me/6282118952552" target="_blank" class="hover:text-amberGold transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-40 transition-all duration-300 glass-header border-b border-espresso-200/50 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#home" class="flex items-center gap-3 group">
+                    <div class="w-11 h-11 rounded-2xl bg-espresso-900 flex items-center justify-center text-amberGold shadow-md group-hover:scale-105 transition-transform">
+                        <i class="fa-solid fa-mug-saucer text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-2xl font-bold tracking-tight text-espresso-900 block leading-none">BENJOY</span>
+                        <span class="text-[10px] tracking-widest uppercase text-espresso-600 font-semibold">Coffee & Eatery • Bandung</span>
+                    </div>
+                </a>
+
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-semibold text-espresso-800">
+                    <a href="#home" class="hover:text-amberGold transition-colors">Beranda</a>
+                    <a href="#about" class="hover:text-amberGold transition-colors">Profil Kami</a>
+                    <a href="#menu" class="hover:text-amberGold transition-colors">Menu Pilihan</a>
+                    <a href="#facilities" class="hover:text-amberGold transition-colors">Fasilitas & Suasana</a>
+                    <a href="#testimonials" class="hover:text-amberGold transition-colors">Ulasan</a>
+                    <a href="#contact" class="hover:text-amberGold transition-colors">Lokasi & Kontak</a>
+                </div>
+
+                <div class="hidden sm:flex items-center space-x-3">
+                    <button onclick="openReservationModal()" class="bg-espresso-900 hover:bg-espresso-800 text-warmCream px-5 py-2.5 rounded-xl text-sm font-semibold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-check text-amberGold"></i> Reservasi Meja
+                    </button>
+                </div>
+
+                <div class="flex items-center sm:hidden">
+                    <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="p-2 rounded-xl text-espresso-900 hover:bg-espresso-100 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl" id="menuIcon"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div id="mobileMenu" class="hidden sm:hidden bg-warmCream border-b border-espresso-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#home" onclick="toggleMobileMenu()" class="block py-2 text-espresso-900 font-medium hover:text-amberGold border-b border-espresso-100">Beranda</a>
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-espresso-900 font-medium hover:text-amberGold border-b border-espresso-100">Profil Kami</a>
+            <a href="#menu" onclick="toggleMobileMenu()" class="block py-2 text-espresso-900 font-medium hover:text-amberGold border-b border-espresso-100">Menu Pilihan</a>
+            <a href="#facilities" onclick="toggleMobileMenu()" class="block py-2 text-espresso-900 font-medium hover:text-amberGold border-b border-espresso-100">Fasilitas & Suasana</a>
+            <a href="#testimonials" onclick="toggleMobileMenu()" class="block py-2 text-espresso-900 font-medium hover:text-amberGold border-b border-espresso-100">Ulasan</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block py-2 text-espresso-900 font-medium hover:text-amberGold border-b border-espresso-100">Lokasi & Kontak</a>
+            <button onclick="toggleMobileMenu(); openReservationModal();" class="w-full bg-espresso-900 text-warmCream py-3 rounded-xl font-semibold shadow-md mt-4 flex justify-center items-center gap-2">
+                <i class="fa-regular fa-calendar-check text-amberGold"></i> Reservasi Meja
+            </button>
+        </div>
+    </header>
+
+    <section id="home" class="relative min-h-[92vh] flex items-center justify-center overflow-hidden bg-espresso-950 text-warmCream py-20">
+        <div class="absolute inset-0 z-0 bg-cover bg-center" style="background-image: url('https://i.pinimg.com/1200x/37/fa/db/37fadb01b6fd57208b5ad7eb13af3555.jpg');"></div>
+        <div class="absolute inset-0 z-10 hero-gradient"></div>
+
+        <div class="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="inline-flex items-center gap-2 bg-espresso-900/80 backdrop-blur-md text-amberGold px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold uppercase tracking-widest border border-amberGold/30 mb-6 shadow-lg">
+                <i class="fa-solid fa-sparkles"></i> Welcome to Benjoy Bandung
+            </span>
+
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-tight mb-6">
+                Cozy Spot, Specialty Coffee <br class="hidden sm:inline"/>
+                <span class="italic font-normal text-amberGold">& Good Food in Bandung</span>
+            </h1>
+
+            <p class="text-espresso-200 text-base sm:text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-10">
+                Satu ruang hangat di kawasan Progo Dago untuk melarikan diri sejenak dari hiruk pikuk kota. Nikmati sajian artisan kopi, menu lezat, dan suasana sejuk rindang khas Bandung.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#menu" class="w-full sm:w-auto bg-amberGold hover:bg-amber-600 text-espresso-950 font-bold px-8 py-4 rounded-xl shadow-xl hover:shadow-amberGold/20 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-utensils"></i> Lihat Menu & Suasana
+                </a>
+                <button onclick="openReservationModal()" class="w-full sm:w-auto bg-espresso-900/80 hover:bg-espresso-900 text-warmCream border border-espresso-600 backdrop-blur-md font-semibold px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2">
+                    <i class="fa-regular fa-calendar-check text-amberGold"></i> Reservasi Meja Now
+                </button>
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-espresso-800/80 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-3 bg-espresso-900/40 rounded-2xl backdrop-blur-sm border border-espresso-800/50">
+                    <p class="font-serif text-2xl font-bold text-amberGold">100%</p>
+                    <p class="text-xs text-espresso-300 font-medium">Biji Arabika Pilihan</p>
+                </div>
+                <div class="p-3 bg-espresso-900/40 rounded-2xl backdrop-blur-sm border border-espresso-800/50">
+                    <p class="font-serif text-2xl font-bold text-amberGold">4.9 ★</p>
+                    <p class="text-xs text-espresso-300 font-medium">Rating Google Maps</p>
+                </div>
+                <div class="p-3 bg-espresso-900/40 rounded-2xl backdrop-blur-sm border border-espresso-800/50">
+                    <p class="font-serif text-2xl font-bold text-amberGold">Free Wi-Fi</p>
+                    <p class="text-xs text-espresso-300 font-medium">Cozy Work Space</p>
+                </div>
+                <div class="p-3 bg-espresso-900/40 rounded-2xl backdrop-blur-sm border border-espresso-800/50">
+                    <p class="font-serif text-2xl font-bold text-amberGold">Garden & AC</p>
+                    <p class="text-xs text-espresso-300 font-medium">Indoor & Outdoor Area</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-warmCream relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 relative">
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                        <img src="https://i.pinimg.com/736x/58/c8/af/58c8af171ae81e89e4e9d50ea403ebca.jpg" alt="Benjoy Coffee Ambiance" class="w-full h-[450px] object-cover hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="absolute -bottom-8 -right-6 z-20 w-3/5 rounded-2xl overflow-hidden shadow-2xl border-4 border-white hidden sm:block">
+                        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Specialty Coffee Barista" class="w-full h-52 object-cover">
+                    </div>
+                    <div class="absolute -top-8 -left-8 w-40 h-40 bg-amberGold/10 rounded-full blur-3xl -z-0"></div>
+                </div>
+
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 text-amberGold font-semibold text-xs uppercase tracking-widest bg-amberGold/10 px-3.5 py-1.5 rounded-full border border-amberGold/20">
+                        <i class="fa-solid fa-mug-hot"></i> Tentangan & Cerita Kami
+                    </div>
+                    
+                    <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-espresso-950 leading-tight">
+                        Rumah Santai & Ruang Kreatif Terbaik di Jantung Bandung
+                    </h2>
+
+                    <p class="text-espresso-800 leading-relaxed text-sm sm:text-base">
+                        Berdiri di kawasan Jalan Progo Bandung yang legendaris, <strong>Benjoy Coffee & Eatery</strong> dirancang khusus sebagai tempat melepas penat, bekerja dengan tenang, atau berkumpul hangat bersama sahabat dan keluarga.
+                    </p>
+
+                    <p class="text-espresso-800 leading-relaxed text-sm sm:text-base">
+                        Kami memadukan seduhan biji kopi lokal kualitas specialty dari petani terpilih Indonesia, hidangan makanan bergaya nusantara & western modern yang menggugah selera, serta atmosfer indoor AC yang tenang dan outdoor garden sejuk.
+                    </p>
+
+                    <div class="grid grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-2xl bg-espresso-100/60 border border-espresso-200 flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-espresso-900 text-amberGold flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-seedling text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-espresso-950 text-sm">Bahan Premium</h4>
+                                <p class="text-xs text-espresso-700 mt-0.5">Semua bahan makanan disiapkan segar setiap hari.</p>
+                            </div>
+                        </div>
+
+                        <div class="p-4 rounded-2xl bg-espresso-100/60 border border-espresso-200 flex items-start gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-espresso-900 text-amberGold flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-laptop text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-espresso-950 text-sm">Work-Friendly</h4>
+                                <p class="text-xs text-espresso-700 mt-0.5">Disertai banyak stopkontak & Wi-Fi stabil.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="#contact" class="inline-flex items-center gap-2 font-bold text-espresso-900 hover:text-amberGold transition-colors text-sm">
+                            Jelajahi Lokasi Kami di Bandung <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-24 bg-espresso-50 border-y border-espresso-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-amberGold font-semibold text-xs uppercase tracking-widest bg-amberGold/10 px-3.5 py-1.5 rounded-full border border-amberGold/20">Sajian Kuliner & Minuman</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-espresso-950 mt-3 mb-4">Menu Pilihan Favorit Benjoy</h2>
+                <p class="text-espresso-700 text-sm sm:text-base">Setiap hidangan dibuat penuh ketelitian oleh Chef & Barista kami untuk melengkapi momen spesial Anda.</p>
+            </div>
+
+            <!-- Menu Category Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12" id="menuFilterTabs">
+                <button onclick="filterMenuCategory('all', event)" class="menu-tab active px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-espresso-900 text-warmCream shadow-md">Semua Menu</button>
+                <button onclick="filterMenuCategory('coffee', event)" class="menu-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-espresso-100 text-espresso-900 hover:bg-espresso-200">Specialty Coffee</button>
+                <button onclick="filterMenuCategory('non-coffee', event)" class="menu-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-espresso-100 text-espresso-900 hover:bg-espresso-200">Non-Coffee</button>
+                <button onclick="filterMenuCategory('mains', event)" class="menu-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-espresso-100 text-espresso-900 hover:bg-espresso-200">Main Course</button>
+                <button onclick="filterMenuCategory('snack', event)" class="menu-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-espresso-100 text-espresso-900 hover:bg-espresso-200">Light Bites</button>
+                <button onclick="filterMenuCategory('dessert', event)" class="menu-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all bg-espresso-100 text-espresso-900 hover:bg-espresso-200">Dessert</button>
+            </div>
+
+            <!-- Menu Grid Container -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="menuGridContainer">
+                <p class="col-span-full text-center text-espresso-600 font-medium py-8">Memuat data menu...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="facilities" class="py-24 bg-espresso-950 text-warmCream relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amberGold font-semibold text-xs uppercase tracking-widest">Kenyamanan Maksimal</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-2 mb-4">Fasilitas Unggulan & Suasana Area</h2>
+                <p class="text-espresso-300 text-sm sm:text-base">Didesain untuk berbagai aktivitas Anda: nongkrong santai, WFC, meeting bisnis, hingga acara komunitas.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-espresso-900/60 border border-espresso-800 hover:border-amberGold/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-amberGold/20 flex items-center justify-center text-amberGold text-2xl mb-6">
+                        <i class="fa-solid fa-wifi"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">Wi-Fi Super Cepat</h3>
+                    <p class="text-espresso-300 text-xs sm:text-sm leading-relaxed">Koneksi internet serat optik berkecepatan tinggi yang stabil untuk Zoom meeting, kerja remote, atau browsing lancar.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-espresso-900/60 border border-espresso-800 hover:border-amberGold/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-amberGold/20 flex items-center justify-center text-amberGold text-2xl mb-6">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">Outdoor Garden Sejuk</h3>
+                    <p class="text-espresso-300 text-xs sm:text-sm leading-relaxed">Area luar ruangan yang asri dan dikelilingi pepohonan hijau rindang khas kawasan Dago Progo Bandung.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-espresso-900/60 border border-espresso-800 hover:border-amberGold/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-amberGold/20 flex items-center justify-center text-amberGold text-2xl mb-6">
+                        <i class="fa-solid fa-plug"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">Power Outlets di Tiap Meja</h3>
+                    <p class="text-espresso-300 text-xs sm:text-sm leading-relaxed">Tidak perlu khawatir kehabisan baterai laptop atau smartphone saat asyik nongkrong atau menyelesaikan pekerjaan.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-espresso-900/60 border border-espresso-800 hover:border-amberGold/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-amberGold/20 flex items-center justify-center text-amberGold text-2xl mb-6">
+                        <i class="fa-solid fa-door-closed"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">VIP & Private Meeting Room</h3>
+                    <p class="text-espresso-300 text-xs sm:text-sm leading-relaxed">Ruang khusus ber-AC dilengkapi Smart TV / Proyektor untuk rapat pribadi, workshop, atau perayaan spesial.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-espresso-900/60 border border-espresso-800 hover:border-amberGold/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-amberGold/20 flex items-center justify-center text-amberGold text-2xl mb-6">
+                        <i class="fa-solid fa-square-parking"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">Area Parkir Luas & Aman</h3>
+                    <p class="text-espresso-300 text-xs sm:text-sm leading-relaxed">Lahan parkir memadai untuk mobil & sepeda motor yang dijaga oleh petugas keamanan kami.</p>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-espresso-900/60 border border-espresso-800 hover:border-amberGold/50 transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 rounded-2xl bg-amberGold/20 flex items-center justify-center text-amberGold text-2xl mb-6">
+                        <i class="fa-solid fa-guitar"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold mb-3">Live Acoustic Weekend</h3>
+                    <p class="text-espresso-300 text-xs sm:text-sm leading-relaxed">Penampilan musik akustik pilihan setiap Jumat & Sabtu malam untuk menemani suasana akhir pekan Anda.</p>
+                </div>
+            </div>
+
+            <div class="mt-16 pt-12 border-t border-espresso-900">
+                <h3 class="font-serif text-2xl font-bold text-center mb-8">Galeri Suasana Tempat</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="rounded-2xl overflow-hidden h-52 border border-espresso-800 group shadow-lg">
+                        <img src="https://i.pinimg.com/736x/87/96/38/879638d7177ef757326751ed644ec8fa.jpg" alt="Cafe Interior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden h-52 border border-espresso-800 group shadow-lg">
+                        <img src="https://i.pinimg.com/736x/28/fb/01/28fb01b1b3a4e89444603387de04ded3.jpg" alt="Outdoor Patio" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden h-52 border border-espresso-800 group shadow-lg">
+                        <img src="https://i.pinimg.com/736x/db/c3/a2/dbc3a26c82075602a2667a184d4bc523.jpg" alt="Espresso Bar" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden h-52 border border-espresso-800 group shadow-lg">
+                        <img src="https://i.pinimg.com/736x/09/09/3f/09093f5982a2ca50be55c382d9ed4db4.jpg" alt="Cozy Dining Corner" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 bg-warmCream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amberGold font-semibold text-xs uppercase tracking-widest bg-amberGold/10 px-3.5 py-1.5 rounded-full border border-amberGold/20">Ulasan Pengunjung</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold text-espresso-950 mt-3">Kata Mereka Tentang Benjoy</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl bg-white border border-espresso-200/80 shadow-md relative flex flex-col justify-between">
+                    <div>
+                        <div class="text-amberGold flex gap-1 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-espresso-800 text-sm leading-relaxed italic mb-6">
+                            "Mau nyobain duduk di area indoor nggak pernah jadi karena kurang adem 😅 Area outdoor enak tapi kalau lagi ramai ya siap2 menghirup asap rokok pengunjung lain 😁 Nasib di Indonesia kalau ada area outdoor sejuk banyak pohon itu bukan berarti bisa hirup udara segar tapi auto jadi tempat perokok klebas klebus."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-espresso-100">
+                        <div class="w-10 h-10 rounded-full bg-espresso-900 text-amberGold font-bold flex items-center justify-center text-sm">SA</div>
+                        <div>
+                            <h4 class="font-bold text-espresso-950 text-sm">itshenipuspita</h4>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-white border border-espresso-200/80 shadow-md relative flex flex-col justify-between">
+                    <div>
+                        <div class="text-amberGold flex gap-1 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-espresso-800 text-sm leading-relaxed italic mb-6">"Tempat asyik untuk nongkrong terutama di malam hari. Staff ramah, tempat bersih dengan banyak meja dan kursi. Suasana seru. Area indoor tidak menggunakan ac, untungnya hawa di outdoor tidak pengap meski ramai pengunjung. Tidak begitu berisik, tapi menurutku kurang cocok untuk WFC."</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-espresso-100">
+                        <div class="w-10 h-10 rounded-full bg-espresso-900 text-amberGold font-bold flex items-center justify-center text-sm">RK</div>
+                        <div>
+                            <h4 class="font-bold text-espresso-950 text-sm">Sinta Maharani</h4>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-8 rounded-3xl bg-white border border-espresso-200/80 shadow-md relative flex flex-col justify-between">
+                    <div>
+                        <div class="text-amberGold flex gap-1 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-espresso-800 text-sm leading-relaxed italic mb-6">"Kafenya nyaman, terutama ada musholanya yg bersih, kamar mandi oke, banyak spot foto disini"</p>
+                    </div>
+                    <div class="flex items-center gap-3 pt-4 border-t border-espresso-100">
+                        <div class="w-10 h-10 rounded-full bg-espresso-900 text-amberGold font-bold flex items-center justify-center text-sm">CL</div>
+                        <div>
+                            <h4 class="font-bold text-espresso-950 text-sm">Nurul hidayati</h4>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-espresso-50 border-t border-espresso-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <div class="lg:col-span-5 bg-espresso-950 text-warmCream rounded-3xl p-8 sm:p-10 flex flex-col justify-between shadow-2xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <span class="text-amberGold text-xs uppercase tracking-widest font-bold">Kunjungi Store Kami</span>
+                        <h3 class="font-serif text-3xl sm:text-4xl font-bold mt-2 mb-8">Lokasi & Jam Operasional</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="p-3 bg-espresso-900 rounded-2xl text-amberGold text-xl shrink-0">
+                                    <i class="fa-solid fa-map-pin"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Alamat Lengkap</h4>
+                                    <p class="text-xs text-espresso-300 mt-1 leading-relaxed">
+                                        Jl. Cibaduyut No.80, Cibaduyut, Kec. Bojongloa Kidul, Kota Bandung, Jawa Barat 40236, Indonesia
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="p-3 bg-espresso-900 rounded-2xl text-amberGold text-xl shrink-0">
+                                    <i class="fa-regular fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Jam Buka Store</h4>
+                                    <p class="text-xs text-espresso-300 mt-1">Senin - Minggu: 08:00 - 23:00 WIB</p>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="p-3 bg-espresso-900 rounded-2xl text-amberGold text-xl shrink-0">
+                                    <i class="fa-solid fa-headset"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-white">Kontak Layanan</h4>
+                                    <p class="text-xs text-espresso-300 mt-1">+62 821-1895-2552 </p>
+                                    <p class="text-xs text-espresso-300">@Benjoy.coffeeatery</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative z-10 pt-8 mt-8 border-t border-espresso-900 flex flex-col sm:flex-row gap-3">
+                        <a href="https://maps.google.com/?cid=17949711552819059606" target="_blank" rel="noopener noreferrer" class="flex-1 bg-amberGold hover:bg-amber-600 text-espresso-950 font-bold py-3.5 px-4 rounded-xl text-center text-xs transition-colors flex items-center justify-center gap-2 shadow-lg">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Petunjuk Google Maps
+                        </a>
+                        <a href="https://wa.me/6282118952552" target="_blank" rel="noopener noreferrer" class="flex-1 bg-espresso-900 hover:bg-espresso-800 text-warmCream font-bold py-3.5 px-4 rounded-xl text-center text-xs transition-colors flex items-center justify-center gap-2 border border-espresso-800">
+                            <i class="fa-brands fa-whatsapp text-emerald-400 text-sm"></i> Chat CS
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-white rounded-3xl overflow-hidden shadow-xl border border-espresso-200 relative min-h-[420px] flex flex-col">
+                    <iframe 
+                        title="Benjoy Coffee & Eatery Location Map - Bandung" 
+                        class="w-full h-full min-h-[420px] border-0"
+                        src="https://www.google.com/maps?q=Jl.+Progo+No.18,+Citarum,+Kec.+Bandung+Wetan,+Kota+Bandung,+Jawa+Barat+40115&output=embed" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-espresso-950 text-espresso-300 pt-16 pb-8 border-t border-espresso-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-amberGold flex items-center justify-center text-espresso-950 font-bold">
+                            <i class="fa-solid fa-mug-saucer text-lg"></i>
+                        </div>
+                        <span class="font-serif text-2xl font-bold text-white">BENJOY</span>
+                    </div>
+                    <p class="text-xs text-espresso-400 leading-relaxed">
+                        Profile resmi Benjoy Coffee & Eatery Bandung. Tempat berkumpul estetik dengan sajian kopi specialty dan hidangan favorit khas Kota Bandung.
+                    </p>
+                    <div class="flex space-x-3 pt-2">
+                        <a href="https://instagram.com" target="_blank" class="w-9 h-9 rounded-xl bg-espresso-900 flex items-center justify-center text-espresso-300 hover:text-amberGold transition-colors" aria-label="Instagram"><i class="fa-brands fa-instagram text-sm"></i></a>
+                        <a href="https://tiktok.com" target="_blank" class="w-9 h-9 rounded-xl bg-espresso-900 flex items-center justify-center text-espresso-300 hover:text-amberGold transition-colors" aria-label="TikTok"><i class="fa-brands fa-tiktok text-sm"></i></a>
+                        <a href="https://wa.me/6282118952552" target="_blank" class="w-9 h-9 rounded-xl bg-espresso-900 flex items-center justify-center text-espresso-300 hover:text-amberGold transition-colors" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp text-sm"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-white font-bold mb-4 text-sm">Navigasi Utama</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><a href="#home" class="hover:text-amberGold transition-colors">Beranda</a></li>
+                        <li><a href="#about" class="hover:text-amberGold transition-colors">Profil Store</a></li>
+                        <li><a href="#menu" class="hover:text-amberGold transition-colors">Daftar Menu</a></li>
+                        <li><a href="#facilities" class="hover:text-amberGold transition-colors">Fasilitas & Suasana</a></li>
+                        <li><a href="#contact" class="hover:text-amberGold transition-colors">Lokasi & Operasional</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-white font-bold mb-4 text-sm">Layanan & Fasilitas</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><span class="text-espresso-400">Indoor AC Working Space</span></li>
+                        <li><span class="text-espresso-400">Outdoor Garden Sejuk</span></li>
+                        <li><span class="text-espresso-400">Private VIP Meeting Room</span></li>
+                        <li><span class="text-espresso-400">Catering & Birthday Event</span></li>
+                        <li><span class="text-espresso-400">Reservasi Meja Online</span></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-serif text-white font-bold mb-4 text-sm">Promo & Update</h4>
+                    <p class="text-xs text-espresso-400 mb-3">Dapatkan voucher promo bulanan dan informasi event eksklusif dari Benjoy Bandung.</p>
+                    <form onsubmit="handleSubscribe(event)" class="space-y-2">
+                        <input type="email" required placeholder="Alamat Email Anda" class="w-full px-3.5 py-2.5 rounded-xl bg-espresso-900 border border-espresso-800 text-warmCream text-xs focus:outline-none focus:border-amberGold">
+                        <button type="submit" class="w-full bg-amberGold hover:bg-amber-600 text-espresso-950 font-bold py-2.5 rounded-xl text-xs transition-colors">
+                            Subscribe Newsletter
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-espresso-900 flex flex-col sm:flex-row justify-between items-center text-xs text-espresso-500 gap-4">
+                <p>&copy; 2026 Benjoy Coffee & Eatery Bandung. All rights reserved.</p>
+                <a href="#home" class="bg-espresso-900 hover:bg-espresso-800 text-amberGold p-2.5 rounded-xl transition-colors flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-up"></i> Ke Atas
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Reservation Modal -->
+    <div id="reservationModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-warmCream rounded-3xl max-w-xl w-full p-6 sm:p-8 shadow-2xl border border-espresso-200 relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeReservationModal()" class="absolute top-5 right-5 text-espresso-600 hover:text-espresso-950 text-xl w-9 h-9 rounded-full bg-espresso-100 flex items-center justify-center">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="mb-6">
+                <span class="text-amberGold text-xs uppercase tracking-widest font-bold">Booking Tempat Online</span>
+                <h3 class="font-serif text-2xl sm:text-3xl font-bold text-espresso-950 mt-1">Reservasi Meja Benjoy</h3>
+                <p class="text-xs text-espresso-700 mt-1">Isi formulir di bawah ini. Data Anda akan disimulasikan & dikirim langsung via WhatsApp.</p>
+            </div>
+
+            <form id="resForm" onsubmit="submitReservationForm(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-espresso-900 uppercase mb-1">Nama Lengkap</label>
+                    <input type="text" id="resName" required placeholder="Contoh: Budi Santoso" class="w-full px-4 py-2.5 rounded-xl border border-espresso-300 focus:ring-2 focus:ring-amberGold focus:outline-none text-sm bg-white">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-espresso-900 uppercase mb-1">Nomor WhatsApp</label>
+                        <input type="tel" id="resPhone" required placeholder="08123456789" class="w-full px-4 py-2.5 rounded-xl border border-espresso-300 focus:ring-2 focus:ring-amberGold focus:outline-none text-sm bg-white">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-espresso-900 uppercase mb-1">Jumlah Orang</label>
+                        <select id="resGuests" class="w-full px-4 py-2.5 rounded-xl border border-espresso-300 focus:ring-2 focus:ring-amberGold focus:outline-none text-sm bg-white">
+                            <option value="1-2 Orang">1 - 2 Orang</option>
+                            <option value="3-4 Orang">3 - 4 Orang</option>
+                            <option value="5-6 Orang">5 - 6 Orang</option>
+                            <option value="Group (>6 Orang)">Grup (>6 Orang)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-bold text-espresso-900 uppercase mb-1">Tanggal Kedatangan</label>
+                        <input type="date" id="resDate" required class="w-full px-4 py-2.5 rounded-xl border border-espresso-300 focus:ring-2 focus:ring-amberGold focus:outline-none text-sm bg-white">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-espresso-900 uppercase mb-1">Jam Kedatangan</label>
+                        <input type="time" id="resTime" required class="w-full px-4 py-2.5 rounded-xl border border-espresso-300 focus:ring-2 focus:ring-amberGold focus:outline-none text-sm bg-white">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-espresso-900 uppercase mb-1">Pilihan Area Meja</label>
+                    <div class="grid grid-cols-3 gap-3">
+                        <label class="border border-espresso-300 rounded-xl p-3 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-espresso-100 has-[:checked]:bg-espresso-900 has-[:checked]:text-white transition-all">
+                            <input type="radio" name="area" value="Indoor AC" checked class="sr-only">
+                            <i class="fa-solid fa-snowflake text-base mb-1"></i>
+                            <span class="text-[11px] font-bold">Indoor AC</span>
+                        </label>
+                        <label class="border border-espresso-300 rounded-xl p-3 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-espresso-100 has-[:checked]:bg-espresso-900 has-[:checked]:text-white transition-all">
+                            <input type="radio" name="area" value="Outdoor Garden" class="sr-only">
+                            <i class="fa-solid fa-leaf text-base mb-1"></i>
+                            <span class="text-[11px] font-bold">Outdoor Garden</span>
+                        </label>
+                        <label class="border border-espresso-300 rounded-xl p-3 flex flex-col items-center justify-center text-center cursor-pointer hover:bg-espresso-100 has-[:checked]:bg-espresso-900 has-[:checked]:text-white transition-all">
+                            <input type="radio" name="area" value="VIP Room" class="sr-only">
+                            <i class="fa-solid fa-crown text-base mb-1"></i>
+                            <span class="text-[11px] font-bold">VIP Room</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-espresso-900 uppercase mb-1">Catatan Tambahan (Opsional)</label>
+                    <textarea id="resNotes" rows="2" placeholder="Contoh: Minta baby chair, perayaan ulang tahun..." class="w-full px-4 py-2.5 rounded-xl border border-espresso-300 focus:ring-2 focus:ring-amberGold focus:outline-none text-sm bg-white"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-amberGold hover:bg-amber-600 text-espresso-950 font-bold py-3.5 rounded-xl shadow-lg transition-all flex items-center justify-center gap-2 text-sm mt-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Kirim Konfirmasi ke WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div id="quickViewModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-warmCream rounded-3xl max-w-lg w-full overflow-hidden shadow-2xl border border-espresso-200 relative">
+            <button onclick="closeQuickViewModal()" class="absolute top-4 right-4 bg-black/50 text-white rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 z-10 transition-colors">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="quickViewModalContent"></div>
+        </div>
+    </div>
+        <!-- Tambahkan library PapaParse sebelum tag script utama -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+
+<script>
+    // 1. Tempelkan URL CSV hasil Publish to Web di sini
+    const GOOGLE_SHEETS_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTmReS0-XEpOV96aoYxhe13qYG5pDFq8UQtmDj9Nyjvlc-5tXmncx7iYKhy5FqeBOgYZYb0ia4GT73Q/pub?output=csv";
+
+    let menuData = [];
+
+    // Format Rupiah
+    function formatRupiah(amount) {
+        return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(amount);
+    }
+
+    // 2. Ambil data CSV langsung dari Google Sheets
+    function loadMenuFromSheets() {
+        const container = document.getElementById('menuGridContainer');
+
+        if (!GOOGLE_SHEETS_CSV_URL || GOOGLE_SHEETS_CSV_URL === "") {
+    container.innerHTML = `<p class="col-span-full text-center text-red-600 font-semibold py-8">
+        Silakan isi link GOOGLE_SHEETS_CSV_URL terlebih dahulu.
+    </p>`;
+    return;
+}
+
+        Papa.parse(GOOGLE_SHEETS_CSV_URL, {
+            download: true,
+            header: true,
+            skipEmptyLines: true,
+            complete: function(results) {
+                // Formatting data CSV ke array objek
+                menuData = results.data.map(item => ({
+                    id: Number(item.ID || item.id),
+                    name: item.Nama || item.nama || item.Name,
+                    category: (item.Kategori || item.kategori || '').toLowerCase().trim(),
+                    price: Number(item.Harga || item.harga),
+                    badge: item.Badge || item.badge || '',
+                    image: item.Gambar || item.gambar || 'https://via.placeholder.com/600x400?text=No+Image',
+                    desc: item.Deskripsi || item.deskripsi || ''
+                }));
+
+                renderMenuGrid('all');
+            },
+            error: function(err) {
+                console.error("Gagal membaca CSV:", err);
+                container.innerHTML = `<p class="col-span-full text-center text-red-600 font-semibold py-8">
+                    Gagal mengambil data dari Google Sheets. Pastikan link CSV sudah dipublikasikan dengan benar.
+                </p>`;
+            }
+        });
+    }
+
+    // 3. Render Menu Grid
+    function renderMenuGrid(category = 'all') {
+        const container = document.getElementById('menuGridContainer');
+        container.innerHTML = '';
+
+        const filteredItems = category === 'all' ? menuData : menuData.filter(item => item.category === category);
+
+        if (filteredItems.length === 0) {
+            container.innerHTML = `<p class="col-span-full text-center text-espresso-600 py-8">Tidak ada menu untuk kategori ini.</p>`;
+            return;
+        }
+
+        filteredItems.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'bg-white rounded-3xl overflow-hidden border border-espresso-200/80 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group';
+
+            card.innerHTML = `
+                <div>
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="${item.image}" alt="${item.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        ${item.badge ? `<span class="absolute top-3 left-3 bg-amberGold text-espresso-950 font-extrabold text-[10px] px-3 py-1 rounded-full uppercase tracking-wider shadow-md">${item.badge}</span>` : ''}
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-serif text-lg font-bold text-espresso-950 group-hover:text-amberGold transition-colors">${item.name}</h3>
+                            <span class="font-bold text-espresso-800 text-sm whitespace-nowrap ml-2">${formatRupiah(item.price)}</span>
+                        </div>
+                        <p class="text-espresso-700 text-xs leading-relaxed line-clamp-2">${item.desc}</p>
+                    </div>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    }
+
+    // 4. Tab Switcher
+    function filterMenuCategory(category, event) {
+        const tabs = document.querySelectorAll('.menu-tab');
+        tabs.forEach(tab => {
+            tab.classList.remove('bg-espresso-900', 'text-warmCream', 'shadow-md');
+            tab.classList.add('bg-espresso-100', 'text-espresso-900');
+        });
+
+        if (event && event.currentTarget) {
+            event.currentTarget.classList.remove('bg-espresso-100', 'text-espresso-900');
+            event.currentTarget.classList.add('bg-espresso-900', 'text-warmCream', 'shadow-md');
+        }
+
+        renderMenuGrid(category);
+    }
+
+    // Modal & Event Handlers
+    function openQuickViewModal(id) {
+        const item = menuData.find(m => m.id === id);
+        if (!item) return;
+
+        const container = document.getElementById('quickViewModalContent');
+        container.innerHTML = `
+            <img src="${item.image}" alt="${item.name}" class="w-full h-64 object-cover">
+            <div class="p-6 sm:p-8">
+                <span class="text-[10px] font-extrabold text-amberGold uppercase tracking-widest bg-amberGold/10 px-3 py-1 rounded-full border border-amberGold/20">${item.category}</span>
+                <h3 class="font-serif text-2xl font-bold text-espresso-950 mt-2">${item.name}</h3>
+                <p class="text-amberGold font-bold text-xl my-2">${formatRupiah(item.price)}</p>
+                <p class="text-espresso-700 text-xs sm:text-sm leading-relaxed mb-6">${item.desc}</p>
+                <div class="flex gap-3">
+                    <button onclick="closeQuickViewModal()" class="flex-1 border border-espresso-300 text-espresso-800 font-bold py-3 rounded-xl text-xs hover:bg-espresso-100 transition-colors">Tutup</button>
+                    <button onclick="closeQuickViewModal(); openReservationModal();" class="flex-1 bg-amberGold hover:bg-amber-600 text-espresso-950 font-bold py-3 rounded-xl text-xs transition-colors shadow-md">Pesan via Reservasi</button>
+                </div>
+            </div>
+        `;
+
+        const modal = document.getElementById('quickViewModal');
+        modal.classList.remove('hidden');
+        setTimeout(() => modal.classList.remove('opacity-0'), 10);
+    }
+
+    function closeQuickViewModal() {
+        const modal = document.getElementById('quickViewModal');
+        modal.classList.add('opacity-0');
+        setTimeout(() => modal.classList.add('hidden'), 300);
+    }
+
+    function openReservationModal() {
+        const modal = document.getElementById('reservationModal');
+        modal.classList.remove('hidden');
+        setTimeout(() => modal.classList.remove('opacity-0'), 10);
+    }
+
+    function closeReservationModal() {
+        const modal = document.getElementById('reservationModal');
+        modal.classList.add('opacity-0');
+        setTimeout(() => modal.classList.add('hidden'), 300);
+    }
+
+    function submitReservationForm(event) {
+        event.preventDefault();
+        const name = document.getElementById('resName').value;
+        const phone = document.getElementById('resPhone').value;
+        const guests = document.getElementById('resGuests').value;
+        const date = document.getElementById('resDate').value;
+        const time = document.getElementById('resTime').value;
+        const area = document.querySelector('input[name="area"]:checked').value;
+        const notes = document.getElementById('resNotes').value || '-';
+
+        const waText = `Halo Admin Benjoy Coffee & Eatery Bandung! Saya ingin mengajukan reservasi meja dengan detail:\n\n` +
+                    `• Nama: ${name}\n` +
+                    `• No WhatsApp: ${phone}\n` +
+                    `• Tanggal: ${date}\n` +
+                    `• Jam: ${time} WIB\n` +
+                    `• Jumlah Orang: ${guests}\n` +
+                    `• Area Pilihan: ${area}\n` +
+                    `• Catatan Khusus: ${notes}\n\n` +
+                    `Mohon konfirmasi ketersediaan tempat. Terima kasih!`;
+
+        window.open(`https://wa.me/6282118952552?text=${encodeURIComponent(waText)}`, '_blank');
+        closeReservationModal();
+        document.getElementById('resForm').reset();
+    }
+
+    function toggleMobileMenu() {
+        document.getElementById('mobileMenu').classList.toggle('hidden');
+    }
+
+    function handleSubscribe(event) {
+        event.preventDefault();
+        alert('Terima kasih! Email Anda telah terdaftar dalam newsletter promo Benjoy Coffee Bandung.');
+        event.target.reset();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        loadMenuFromSheets();
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('resDate').setAttribute('min', today);
+    });
+    </script>
+</body>
+</html>
